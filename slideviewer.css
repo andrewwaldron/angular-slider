@@ -1,0 +1,32 @@
+/*****************************************************/
+/* [BASELINE] Styles for the slide viewer and arrows */
+.slide-viewer * { margin: 0; }
+.slide-viewer { margin-top: 25px; height: 200px; text-align: center; width 100%; background: #DDD; position: relative;}
+.slide-viewer p { text-align: center; }
+.slide-viewer img { width: 100%; }
+
+/* [CONTROLS - IMAGES] Set the background images for the controls (sprite based) */
+.leftarrow, .rightarrow, .smpt, .ctrl-btn.play:hover, .ctrl-btn.pause:hover { background: url("sprite.png") no-repeat; }
+.ctrl-btn.play, .ctrl-btn.pause {background: rgba(255,255,255,0.4) url("sprite.png") no-repeat; }
+.ctrl-pin {background: url("sprite.png") no-repeat; }
+.ctrl-btn.pause, .ctrl-btn.pause:hover { background-position: -544px -32px; }
+.ctrl-btn.play, .ctrl-btn.play:hover { background-position: -544px 0; }
+.leftarrow { background-position: 0 0; left: 5px; }
+.leftarrow:hover { background-position: -256px 0; }
+.rightarrow { background-position: -128px 0; right: 5px; }
+.rightarrow:hover { background-position: -384px 0; }
+.ctrl-pin { background-position: -512px 0; }
+.ctrl-pin.active, .ctrl-pin.active:hover { background-position: -512px -64px; }
+.ctrl-pin:hover { background-position: -512px -32px; }
+
+/* [CONTROLS] Position and style the controls on the slide viewer */
+.leftarrow, .rightarrow { top: 186px; height: 128px; width: 128px; position: absolute; z-index: 100; }
+.ctrl-btn.play, .ctrl-btn.pause { border-radius: 5px; border: 3px solid #000; width: 38px; height: 38px; position: absolute; bottom: 20px; left: 10px; z-index: 100; }
+.pin-container { border: 2px solid #000; left: 50px; background: rgba(255,255,255,0.4); border-radius: 4px; text-align: center; bottom: 20px; position: absolute; z-index: 100;}
+.ctrl-pin { width: 32px; height: 32px; display: inline-block; cursor: pointer;}
+
+/* [HELPERS] Assorted styles to help in creating slides */
+.right-bar-heading { right: 0; position: absolute; background: #C0C0C0; opacity: 0.75; filter: alpha(opacity=75); padding: 45px; margin-top: 25px; }
+.full-width-heading { right: 35px; position: absolute; background: #C0C0C0; opacity: 0.75; filter: alpha(opacity=75); padding: 25px; margin-top: 25px; top: 25px; left: 35px; }
+.slide-image img { max-width: 100%; position: absolute; bottom: -75px; left: 0; }
+.viewer-selected-area .viewer-image { display: none; }
